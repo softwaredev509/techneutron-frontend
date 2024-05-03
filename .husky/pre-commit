@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# npx lint-staged // Sumit will uncomment this line after following files eslint error is fixed
+
+# src/screens/sign-in/SignInForm.tsx
+# src/screens/sign-in/SignInForm.types.ts
+# src/screens/sing-up/SignUpForm.tsx
+# src/screens/sing-up/SignUpForm.types.ts
+# src/services/auth/AuthApi.tsx
+
+
