@@ -4,7 +4,7 @@ import {
   CreateUserType,
   LogUserResponseType,
   LogUserType,
-} from "./AuthApi.types";
+} from "../../types/AuthApi.types";
 
 export const AuthApi = createApi({
   reducerPath: "AuthApi",

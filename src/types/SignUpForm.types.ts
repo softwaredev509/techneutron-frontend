@@ -8,7 +8,7 @@ export interface User {
 export interface RegisterResponse {
   data?: {
     message?: string;
-    status?: string; // Assuming the backend response contains a status field
+    Status?: string; // Assuming the backend response contains a status field
   };
   error?: any;
 }

@@ -19,7 +19,7 @@ import {
 } from "@mui/icons-material";
 
 const DashboardWithPersistentDrawer: React.FC = () => {
-  const [openDrawer, setOpenDrawer] = useState(false);
+  const [openDrawer, setOpenDrawer] = useState(true);
 
   const toggleDrawer = () => {
     setOpenDrawer(!openDrawer);
@@ -37,11 +37,12 @@ const DashboardWithPersistentDrawer: React.FC = () => {
         open={openDrawer}
         onClose={handleDrawerClose}
         sx={{
-          width: 240, // Width adjustment for full variant
+
+          width: 240,
           flexShrink: 0,
-          "& .MuiDrawer-paper": {
-            width: 240, // Width adjustment for full variant
-            boxSizing: "border-box",
+          '& .MuiDrawer-paper': {
+            width: 240,
+            boxSizing: 'border-box',
           },
         }}
       >
@@ -51,55 +52,33 @@ const DashboardWithPersistentDrawer: React.FC = () => {
           </IconButton>
         </div>
         <List>
-          <ListItem
-            button
-            component={Link}
-            to="/dashboard"
-            onClick={handleDrawerClose}
-          >
+          <ListItem button component={Link} to="/dashboard" onClick={handleDrawerClose}>
             <Tooltip title="Dashboard" placement="right">
-              <ListItemIcon>
-                <DashboardIcon />
-              </ListItemIcon>
+              <ListItemIcon><DashboardIcon /></ListItemIcon>
             </Tooltip>
             <Typography variant="inherit">Dashboard</Typography>
           </ListItem>
-          <ListItem
-            button
-            component={Link}
-            to="/payslip"
-            onClick={handleDrawerClose}
-          >
+          <ListItem button component={Link} to="/payslip/options" onClick={handleDrawerClose}>
             <Tooltip title="Payment Slip" placement="right">
-              <ListItemIcon>
-                <WalletIcon />
-              </ListItemIcon>
+              <ListItemIcon><WalletIcon /></ListItemIcon>
             </Tooltip>
             <Typography variant="inherit">Payment Slip</Typography>
           </ListItem>
-          <ListItem
-            button
-            component={Link}
-            to="/recruitment-form"
-            onClick={handleDrawerClose}
-          >
+          <ListItem button component={Link} to="/employee/options" onClick={handleDrawerClose}>
+            <Tooltip title="Payment Slip" placement="right">
+              <ListItemIcon><WalletIcon /></ListItemIcon>
+            </Tooltip>
+            <Typography variant="inherit">Employee</Typography>
+          </ListItem>
+          <ListItem button component={Link} to="/recruitment-form" onClick={handleDrawerClose}>
             <Tooltip title="Recruitment Form" placement="right">
-              <ListItemIcon>
-                <WorkIcon />
-              </ListItemIcon>
+              <ListItemIcon><WorkIcon /></ListItemIcon>
             </Tooltip>
             <Typography variant="inherit">Recruitment Form</Typography>
           </ListItem>
-          <ListItem
-            button
-            component={Link}
-            to="/appraisal-form"
-            onClick={handleDrawerClose}
-          >
+          <ListItem button component={Link} to="/appraisal-form" onClick={handleDrawerClose}>
             <Tooltip title="Appraisal Form" placement="right">
-              <ListItemIcon>
-                <AssignmentIndIcon />
-              </ListItemIcon>
+              <ListItemIcon><AssignmentIndIcon /></ListItemIcon>
             </Tooltip>
             <Typography variant="inherit">Appraisal Form</Typography>
           </ListItem>
@@ -113,12 +92,11 @@ const DashboardWithPersistentDrawer: React.FC = () => {
           color="inherit"
           aria-label="open drawer"
           onClick={toggleDrawer}
-          sx={{ p: 5, ml: 5 }} // Adjust padding and margin
+          sx={{ p: 5, ml: 5 }}
         >
           <MenuIcon />
         </IconButton>
       )}
-      {/* Your existing dashboard content */}
     </>
   );
 };

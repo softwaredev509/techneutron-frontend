@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
-import PayslipForm from './PayslipInputForm';
+import PayslipForm from '../screens/payment-slip/PayslipInputForm';
 
 describe('PayslipForm component', () => {
   // Test case 1: Check if all form fields render and form submits when valid

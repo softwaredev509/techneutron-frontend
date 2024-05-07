@@ -8,7 +8,16 @@ export const PayslipTop = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+`;
+export const PayslipOptionBtn = styled.div`
+width: 10rem:
+height: 10rem;
+display: flex;
+gap: 2rem;
+flex-direction: row;
+justify-content: center;
+align-items: center;
 `;
 export const PayslipMiddle = styled.div`
   margin: 1rem 0 0 0;

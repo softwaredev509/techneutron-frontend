@@ -7,7 +7,10 @@ const DashboardRedirect: React.FC = () => {
   useEffect(() => {
     const token = localStorage.getItem("access_token");
 
-    if (!token) navigate("/");
+    if (!token) {
+      navigate('/')
+    }
+    
   }, []);
 
   return null;

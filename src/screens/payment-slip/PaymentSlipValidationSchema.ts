@@ -2,10 +2,10 @@ import * as Yup from "yup";
 
 export const PaymentSlipValidationSchema = Yup.object().shape({
   employee_id: Yup.number().required("Employee ID is required").min(1, "Employee ID must be 1 or more"),
-  total_working_days: Yup.number().required("Total Working Days is required").min(0, "Total Working Days must be 0 or more"),
+  total_working_days: Yup.number().required("Total Working Days is required").min(1, "Total Working Days must be 1 or more"),
   present_working_days: Yup.number().required("Present Working Days is required").min(0, "Present Working Days must be 0 or more"),
   period: Yup.string().required("Period is required"),
-  basic_salary: Yup.number().required("Basic Salary is required").min(0, "Basic Salary must be 0 or more"),
+  basic_salary: Yup.number().required("Basic Salary is required").min(1, "Basic Salary must be 1 or more"),
   house_rent_allowance: Yup.number().required("House Rent Allowance is required").min(0, "House Rent Allowance must be 0 or more"),
   special_allowance: Yup.number().required("Special Allowance is required").min(0, "Special Allowance must be 0 or more"),
   conveyance: Yup.number().required("Conveyance is required").min(0, "Conveyance must be 0 or more"),
@@ -44,8 +44,6 @@ export const PaymentSlipValidationSchema = Yup.object().shape({
   salary_advance: Yup.number().required("Salary Advance is required").min(0, "Salary Advance must be 0 or more"),
   loan_balance: Yup.number().required("Loan Balance is required").min(0, "Loan Balance must be 0 or more"),
   payment_mode: Yup.string().required("Payment Mode is required"),
-  payment_date: Yup.date().required("Payment Date is required"),
-  employeeId: Yup.number().required("Employee ID is required").min(0, "Employee ID must be 0 or more"),
-  employeeEmployeeId: Yup.number().required("Employee Employee ID is required").min(0, "Employee Employee ID must be 0 or more")
+  payment_date: Yup.date().required("Payment Date is required")
 });
 

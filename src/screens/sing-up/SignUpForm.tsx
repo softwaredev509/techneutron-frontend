@@ -12,7 +12,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useNavigate } from "react-router";
 import { useCreateUserMutation } from "../../services/auth/AuthApi";
 import { NavLink } from "react-router-dom";
-import { RegisterResponse, User } from "./SignUpForm.types";
+import { RegisterResponse, User } from "../../types/SignUpForm.types";
 import { useFormik } from "formik";
 import { SignupValidationSchema } from "./SignupValidationSchema";
 
@@ -54,7 +54,7 @@ export default function SignUp() {
         const response: RegisterResponse = await createUser(values);
         console.log("Signup response: ", response);
 
-        if (response?.data?.status === "201") {
+        if (response?.data?.Status === "200") {
           alert("User added successfully, kindly login");
           navigate("/signin");
         }

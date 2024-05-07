@@ -12,7 +12,7 @@ import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useNavigate } from "react-router";
 import { useLogUserMutation } from "../../services/auth/AuthApi";
-import { LoginSuccessResponse, User } from "./SignInForm.types";
+import { LoginSuccessResponse, User } from "../../types/SignInForm.types";
 import { SigninValidationSchema } from "./SigninValidationSchema";
 import { useFormik } from "formik";
 import Container from "@mui/material/Container";
@@ -61,8 +61,7 @@ export default function SignInForm() {
           navigate("/dashboard");
         }
         if (response.error?.status === 401) {
-          alert("User is not registered yet! Kindly register first.");
-          navigate("/");
+          alert("Either email address or password is incorrect!");
         }
       } catch (error) {
         console.error(error);
