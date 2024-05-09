@@ -16,7 +16,7 @@ const CreatePayslip = () => {
     const { id } = useParams()
     const Id = parseInt(id, 10)
 
-    const { data, error, isLoading } = useGetEmployeeByIdQuery(Id !== undefined ? Id : 0)
+    const { data} = useGetEmployeeByIdQuery(Id !== undefined ? Id : 0)
 
     const formik = useFormik({
         initialValues: initialValues,

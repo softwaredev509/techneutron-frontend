@@ -7,7 +7,8 @@ export interface CreateUserType {
 
 export interface CreateUserResponseType {
   message?: string;
-  status?: string;
+  status?: string | number;
+  data?: string;
 }
 
 export interface LogUserType {
@@ -26,8 +27,6 @@ export interface LogUserResponseType {
     email: string;
   };
   message: string;
-  data?: {
-    error?: string;
-  };
-  status?: number;
+  error?: string;
+  
 }

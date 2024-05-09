@@ -13,7 +13,7 @@ const PayslipForm = () => {
   const [employeeId, setEmployeeId] = useState<number | undefined>(undefined)
   const [loading, setLoading] = useState(false);
 
-  const { data, error, isLoading } = useGetPaymentSlipByIdQuery(employeeId !== undefined ? employeeId : 0)
+  const { data } = useGetPaymentSlipByIdQuery(employeeId !== undefined ? employeeId : 0)
   const [generatePayslipPdf] = useGeneratePayslipPdfMutation();
 
   const formik = useFormik({

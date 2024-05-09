@@ -10,5 +10,8 @@ export interface RegisterResponse {
     message?: string;
     Status?: string; // Assuming the backend response contains a status field
   };
-  error?: any;
+  error?: {
+    data: string,
+    status: number
+  };
 }

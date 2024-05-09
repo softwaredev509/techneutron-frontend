@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import DashboardRedirect from "./components/DashboardRedirect/DashboardRedirect";
 import SignUp from "./screens/sing-up/SignUpForm";
 import SignInForm from "./screens/sign-in/SignInForm";
@@ -17,11 +16,11 @@ function App() {
     <>
       <Router>
         <DashboardRedirect />
-        <Dashboard/>
+        {/* <Dashboard/> */}
         <Routes>
           <Route path="/" element={<SignUp />} />
           <Route path="/signin" element={<SignInForm />} />
-          {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/payslip/generate" element={<PayslipForm />} />
           <Route path="/payslip/create" element={<CreatePayslip />} />
           <Route path="/payslip/create/:id" element={<CreatePayslip />} />

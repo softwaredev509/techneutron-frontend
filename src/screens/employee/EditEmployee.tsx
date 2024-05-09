@@ -15,7 +15,7 @@ const EditEmployee = () => {
     const EmpId = parseInt(id, 10);
     const navigate = useNavigate()
 
-    const { data, error, isLoading, refetch } = useGetEmployeeByIdQuery(EmpId)
+    const { data, refetch } = useGetEmployeeByIdQuery(EmpId)
 
     const [updateEmployee] = useUpdateEmployeeMutation();
 

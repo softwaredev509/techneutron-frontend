@@ -16,5 +16,10 @@ export interface LoginSuccessResponse {
     };
     message: string;
   };
-  error?: any;
+  error?: {
+    status: number,
+    data:{
+      error: string
+    }
+  }
 }

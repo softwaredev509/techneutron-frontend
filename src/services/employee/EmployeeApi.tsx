@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { EmployeeFormData } from "../../content/Forms/employee/Employee.types";
-import { CreatedEmployeeApiResponse, DeleteSuccessApiResponse } from "../../types/EmployeeApi.types";
+import { CreatedEmployeeApiResponse, DeleteSuccessApiResponse, UpdateSuccessApiResponse } from "../../types/EmployeeApi.types";
 
 export const EmployeeApi = createApi({
 
@@ -25,7 +25,7 @@ export const EmployeeApi = createApi({
             query: (id) => `api/employees/${id}`,
         }),
 
-        updateEmployee: builder.mutation<any, { id: number; data: EmployeeFormData }>({
+        updateEmployee: builder.mutation<UpdateSuccessApiResponse, { id: number; data: EmployeeFormData }>({
             query: ({ id, data }) => ({
                 url: `/api/employees/${id}`,
                 method: "PUT",

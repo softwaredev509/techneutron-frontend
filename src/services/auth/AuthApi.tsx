@@ -12,9 +12,6 @@ export const AuthApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "http://127.0.0.1:8000" }),
 
   endpoints: (builder) => ({
-    getUsers: builder.query<any[], void>({
-      query: () => "/api/candidates",
-    }),
 
     createUser: builder.mutation<CreateUserResponseType, CreateUserType>({
       query: (newUser) => ({

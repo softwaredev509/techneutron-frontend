@@ -6,7 +6,7 @@ import { useDeleteEmployeeMutation, useGetEmployeesQuery } from '../../services/
 
 const EmployeeList = ({ paySlipAction }) => {
 
-    const { data, error, isLoading, refetch } = useGetEmployeesQuery()
+    const { data, refetch } = useGetEmployeesQuery()
     const navigate = useNavigate()
     const [deleteEmployee] = useDeleteEmployeeMutation();
 
